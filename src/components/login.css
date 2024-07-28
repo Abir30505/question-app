@@ -1,0 +1,95 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+  }
+  
+  .login {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login label {
+    display: block;
+    margin: 10px;
+  }
+  
+  .login input[type="email"],
+  .login input[type="password"] {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .login input[type="email"]:focus,
+  .login input[type="password"]:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .login button[type="submit"] {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .login button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  
+  .login p {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .login p a {
+    text-decoration: none;
+    color: #4CAF50;
+  }
+  
+  .login p a:hover {
+    color: #3e8e41;
+  }
+  
+  .login .error {
+    color: #f44336;
+    margin-bottom: 10px;
+  }
+  .login-container {
+    animation: fadeIn 1s;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .login {
+    animation: slideIn 1s;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(100px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
