@@ -1,0 +1,89 @@
+/* home.css */
+
+.home-container {
+    position: relative;
+ /* adjust this value to make space for the navbar */
+    width: 80%; /* adjust the width to your liking */
+    max-width: 600px; /* set a maximum width */
+    margin: 0 auto; /* center the container horizontally */
+    padding: 40px; /* light gray background */
+    text-align: center;
+  }
+  
+  .home-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .home-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
+  }
+  
+  .home-content h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #444;
+  }
+  
+  .home-content p {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 30px;
+  }
+  
+  .home-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .home-content li {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .home-content button {
+    background-color: #4CAF50; /* green background */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .home-content button:hover {
+    background-color: #3e8e41;
+  }
+
+  /* home.css */
+
+.home-content a {
+    text-decoration: none;
+    color: #17181a; /* blue color */
+    transition: color 0.2s ease;
+  }
+  
+  .home-content a:hover {
+    color: #23527c; /* darker blue color on hover */
+  }
+  
+  .home-content a.button {
+    background-color: #4CAF50; /* green background */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .home-content a.button:hover {
+    background-color: #3e8e41;
+  }

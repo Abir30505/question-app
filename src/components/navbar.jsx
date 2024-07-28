@@ -19,12 +19,12 @@ function Navbar() {
 
   return (
     <div className='nav-container'> 
-      <Link to='/signup' className={location.pathname === '/signup' ? 'active' : ''}>Account</Link>
      { auth.currentUser ? <> <Link to='/mcq'>question</Link>
       <Link to='/addmcq'>add question</Link>
       <Link to='/quiz'>Play-Quiz</Link>
       <button className='button' onClick={logout}>log out</button>
-      </>:<></>}
+      </>:<> <Link to='/signup' className={location.pathname === '/signup' ? 'active' : ''}>Register</Link>
+      </>}
     </div>
   )
 }
