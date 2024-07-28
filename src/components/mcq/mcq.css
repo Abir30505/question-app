@@ -63,3 +63,61 @@
   .wrong{
     background-color: #FFB6C1;
   }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+    list-style: none;
+  }
+  
+  .page-item {
+    margin: 0 5px;
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+  }
+  
+  .page-item.active {
+    background-color: #337ab7;
+    color: #fff;
+    border-color: #337ab7;
+  }
+  
+  .page-item:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .page-item.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  .previous, .next {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 10px;
+    cursor: pointer;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  .previous:hover, .next:hover {
+    color: #337ab7;
+  }
+  
+  .break {
+    margin: 0 5px;
+  }
+  .page-link {
+    list-style: none;
+  }

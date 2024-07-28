@@ -43,27 +43,27 @@ function AddMcq() {
       <form onSubmit={handleSubmit}>
         <label>
           Question:
-          <input type="text" value={question} onChange={(e) => setQuestion(e.target.value)} />
+          <input type="text" value={question} onChange={(e) => setQuestion(e.target.value)} required/>
         </label>
         <label>
           Option 1:
-          <input type="text" value={option1} onChange={(e) => setOption1(e.target.value)} />
+          <input type="text" value={option1} onChange={(e) => setOption1(e.target.value)} required/>
         </label>
         <label>
           Option 2:
-          <input type="text" value={option2} onChange={(e) => setOption2(e.target.value)} />
+          <input type="text" value={option2} onChange={(e) => setOption2(e.target.value)} required/>
         </label>
         <label>
           Option 3:
-          <input type="text" value={option3} onChange={(e) => setOption3(e.target.value)} />
+          <input type="text" value={option3} onChange={(e) => setOption3(e.target.value)} required />
         </label>
         <label>
           Option 4:
-          <input type="text" value={option4} onChange={(e) => setOption4(e.target.value)} />
+          <input type="text" value={option4} onChange={(e) => setOption4(e.target.value)} required />
         </label>
         <label>
           Answer no:
-          <input placeholder='only digit supported!' type="text" value={ans} onChange={(e) => setAns(e.target.value)} />
+          <input required placeholder='only digit supported!' type="text" value={ans} onChange={(e) => setAns(e.target.value)} />
         </label>
         <button type="submit">Add Question</button>
       </form>
