@@ -3,12 +3,10 @@ import './mcq.css';
 import { db, auth } from '../../firebase';
 import { collection, deleteDoc, getDocs, doc } from 'firebase/firestore';
 
-function McqChild({mcq,index,mcqs,setMcq,getData}){
+function McqChild({mcq,index,mcqs,setMcq,getData,getData2}){
     const [lock, setLock] = useState(false);
     const [lockdata,setlockdata]= useState([])
     const [ans ,setAns]= useState('')
-    const [score,setScore] = useState(0);
-    const [total,setTotal] = useState(0);
   
     const option1 = useRef(null);
     const option2 = useRef(null);
@@ -17,10 +15,9 @@ function McqChild({mcq,index,mcqs,setMcq,getData}){
     const options = [option1, option2, option3, option4]
     function ansClick(e, checkans, mcqAns, mcqid) {
       if (! lockdata.includes(mcqid)) {
-        if (!lock) {
           if (checkans == mcqAns) {
             e.target.classList.add("correct");
-            setScore(score+1)
+            getData2(1)
           } else {
             e.target.classList.add("wrong");
             options[mcq.ans-1].current.classList.add('correct')
@@ -28,11 +25,11 @@ function McqChild({mcq,index,mcqs,setMcq,getData}){
     
           setlockdata([...lockdata, mcqid]);
           setAns(options[mcq.ans-1].current.textContent)
-          setTotal(total+1)
-          getData(total+1)
+          getData(1)
+        
           
        
-        }
+        
       } 
      }
 

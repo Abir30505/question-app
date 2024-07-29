@@ -63,7 +63,7 @@ function AddMcq() {
         </label>
         <label>
           Answer no:
-          <input required placeholder='only digit supported!' type="text" value={ans} onChange={(e) => setAns(e.target.value)} />
+          <input required placeholder='only digit supported!' type="number" value={ans} onChange={(e) => setAns(e.target.value)} />
         </label>
         <button type="submit">Add Question</button>
       </form>

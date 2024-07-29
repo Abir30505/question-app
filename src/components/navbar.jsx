@@ -22,6 +22,7 @@ function Navbar() {
      { auth.currentUser ? <> <Link to='/mcq'>question</Link>
       <Link to='/addmcq'>add question</Link>
       <Link to='/quiz'>Play-Quiz</Link>
+      <Link to= '/dashboard'>Dashboard</Link>
       <button className='button' onClick={logout}>log out</button>
       </>:<> <Link to='/signup' className={location.pathname === '/signup' ? 'active' : ''}>Register</Link>
       </>}

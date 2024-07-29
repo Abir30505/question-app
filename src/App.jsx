@@ -10,6 +10,7 @@ import Mcq from './components/mcq/mcq'
 import AddMcq from './components/mcq/addmcq'
 import Menu from './components/menu'
 import Home from './components/home'
+import Dashboard from './components/Dashboard/dashboard'
 
 const AuthContext = createContext()
 
@@ -35,6 +36,7 @@ function App() {
           <Route path='/mcq' element={user ? <Mcq/> : <Navigate to="/login" replace />}></Route>
           <Route path='/addmcq' element={user ? <AddMcq/> : <Navigate to="/login" replace />}></Route>
           <Route path='/menu' element={user ? <Menu/> : <Navigate to="/login" replace />}></Route>
+          <Route path='/dashboard' element={user ? <Dashboard/> : <Navigate to="/login" replace />}></Route>
           
         </Routes>
       </BrowserRouter>
