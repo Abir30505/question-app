@@ -13,9 +13,10 @@ function DashboardChild({ score ,allscores,setAllScore}) {
 
   return (
     <div className='dashboard-item'>
-      <h5>{auth.currentUser.email}</h5>
+      <h5>{score.author}</h5>
       <h5>Score: {score.point}</h5>
       <p>{score.time}</p>
+      <p>{score.date}</p>
 
      <div className='dashboard-btn'>
      {auth.currentUser && score.authorId === auth.currentUser.uid ? (

@@ -60,7 +60,9 @@ function Mcq() {
       
       const docRef = await addDoc(collection(db, "scores"), {
         point: score,
+        author: auth.currentUser.displayName || auth.currentUser.email ,
         time:new Date().toLocaleTimeString() ,
+        date: new Date().toDateString(),
         authorId: auth.currentUser.uid
       });
       console.log("scores written with ID: ", docRef.id);
@@ -76,7 +78,7 @@ function Mcq() {
   return (
     <div className='mcq-container'>
       <div className="mcq-content">
-        <h4> your score is {score} out of {total} <button className='button' onClick={handleSubmitAns}>submit ans</button></h4>
+        <h4> your score is {score} out of {total} &nbsp; &nbsp; <button className='button' onClick={handleSubmitAns}>submit score </button></h4>
       {displayMcqs.map((mcq, i) => (
         <McqChild mcq={mcq} index={i} mcqs={mcqs} setMcq={setMcqs} getData={getData} getData2={getData2}/>
         ))}
@@ -95,6 +97,7 @@ function Mcq() {
           nextLinkClassName={"page-link"}
           activeClassName={"active"}
         />
+        
       </div>
     </div>
   );
