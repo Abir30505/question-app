@@ -13,7 +13,7 @@ function DashboardChild({ score ,allscores,setAllScore}) {
 
   return (
     <div className='dashboard-item'>
-      <h5>{score.author}</h5>
+      <h4>{score.author}</h4>
       <h5>Score: {score.point}</h5>
       <p>{score.time}</p>
       <p>{score.date}</p>
